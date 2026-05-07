@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../features/Auth/Register/presentation/screens/signup_screen.dart';
 import '../../../features/Auth/change_password/presentation/screens/change_password.dart';
 import '../../../features/Auth/create _newpassword/screens/create_new_password.dart';
 import '../../../features/Auth/forget_password/presentation/forgetpassword_screen.dart';
 import '../../../features/Auth/login/presentation/screens/login_screen.dart';
+import '../../../features/Auth/signup/presentation/signup_screen.dart';
 import '../../../features/Home/presentation/screens/Main_layout.dart';
 import '../../../features/Home/presentation/screens/notification_screen.dart';
 import '../../../features/address/screens/delivert_adress_screen.dart';

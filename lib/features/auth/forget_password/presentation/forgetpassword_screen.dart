@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newfashionstore/features/auth/forget_password/presentation/widgets/Forget_password_Button.dart';
 import 'package:newfashionstore/features/auth/forget_password/presentation/widgets/forget_password_header.dart';
+import 'package:newfashionstore/features/auth/verification_code/presentation/screens/verificaton_code.dart';
 import 'widgets/email_input_field.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
@@ -24,8 +25,8 @@ class ForgotPasswordScreen extends StatelessWidget {
               const SizedBox(height: 40),
               ForgetPasswordButton(
                 onPressed: () {
-                  // Navigator.pushNamed(
-                      // context, VerificationCodeScreen.routeName);
+                  Navigator.pushNamed(
+                      context, VerificationCodeScreen.routeName);
 
                   // Navigate to Home
                 },

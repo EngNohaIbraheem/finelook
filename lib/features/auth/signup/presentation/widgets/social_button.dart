@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newfashionstore/features/Auth/Register/presentation/widgets/social_icon.dart';
+import 'package:newfashionstore/features/auth/signup/presentation/widgets/social_icon.dart';
 
 class SocialButtons extends StatelessWidget {
   const SocialButtons({super.key});

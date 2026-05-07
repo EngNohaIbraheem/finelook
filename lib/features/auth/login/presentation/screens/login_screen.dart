@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../Register/presentation/widgets/social_button.dart';
+import 'package:newfashionstore/features/auth/login/presentation/manager/login_cubit.dart';
+import '../../../signup/presentation/widgets/social_button.dart';
 import '../widgets/OR_divider_text_login.dart';
 import '../widgets/login_header.dart';
 import '../widgets/login_form.dart';
@@ -19,12 +20,9 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return
-      ///BlocProvider(
-      /// create logicCubit////
-      /// create: (context) => LoginCubit(),
-      // child:
-    const Scaffold(
+    return BlocProvider(
+      create: (context) => LoginCubit(),
+      child: const Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Padding(
@@ -50,9 +48,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-        )
+        ),
+      ),
     );
-    //   ),
-    // );
   }
 }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newfashionstore/core/widgets/custom_text_field.dart';
-
-import '../widgets/OR_divider_text.dart';
-import '../widgets/Signup_button.dart';
-import '../widgets/Signup_title.dart';
-import '../widgets/signup_form.dart';
-import '../widgets/social_button.dart';
-import '../widgets/text_login.dart';
+import 'package:newfashionstore/features/auth/login/presentation/manager/login_cubit.dart';
+import 'package:newfashionstore/features/auth/signup/presentation/widgets/OR_divider_text.dart';
+import 'package:newfashionstore/features/auth/signup/presentation/widgets/Signup_button.dart';
+import 'package:newfashionstore/features/auth/signup/presentation/widgets/Signup_title.dart';
+import 'package:newfashionstore/features/auth/signup/presentation/widgets/signup_form.dart';
+import 'package:newfashionstore/features/auth/signup/presentation/widgets/social_button.dart';
+import 'package:newfashionstore/features/auth/signup/presentation/widgets/text_login.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
