@@ -22,7 +22,15 @@ class ProductCard extends StatelessWidget {
           Expanded(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
-              child: Image.asset(image, fit: BoxFit.cover),
+              child: Image.network(
+                image,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Center(
+                    child: Icon(Icons.error_outline, color: Colors.grey),
+                  );
+                },
+              ),
             ),
           ),
           const SizedBox(height: 8),

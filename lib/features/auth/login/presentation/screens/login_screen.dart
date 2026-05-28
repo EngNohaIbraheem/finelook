@@ -20,8 +20,10 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
+    /// BlocProvider//////
     return BlocProvider(
       create: (context) => LoginCubit(),
+      ///fhdbhdjbvkjdv////
       child: const Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(

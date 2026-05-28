@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newfashionstore/features/home/presentation/screens/slide_bar_drawer.dart';
+import '../../../products/manger/products_cubit.dart';
 import '../widgets/Recommended_list.dart';
 import '../widgets/TopCollectionSection.dart';
 import '../widgets/app_home_bar.dart';
@@ -18,29 +20,32 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const SidebarDrawer(),
-      appBar: const HomeAppBar(),
-      backgroundColor: Colors.white,
-      body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        children: const [
-          SizedBox(height: 16),
-          CategorySection(),
-          SizedBox(height: 20),
-          BannerSection(),
-          SizedBox(height: 24),
-          SectionHeader(title: 'Feature Products'),
-          FeaturedProducts(),
-          SizedBox(height: 40),
-          NewCollectionBanner(),
-          SectionHeader(title: 'Recommended'),
-          RecommendedList(),
-          SizedBox(height: 40),
-          TopCollectionBannerslim(),
-          SizedBox(height: 30),
-          SummerCollectionBanner(),
-        ],
+    return BlocProvider(
+      create: (context) => ProductsCubit()..getproducts(),
+      child: Scaffold(
+        drawer: const SidebarDrawer(),
+        appBar: const HomeAppBar(),
+        backgroundColor: Colors.white,
+        body: ListView(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          children: const [
+            SizedBox(height: 16),
+            CategorySection(),
+            SizedBox(height: 20),
+            BannerSection(),
+            SizedBox(height: 24),
+            SectionHeader(title: 'Feature Products'),
+            FeaturedProducts(),
+            SizedBox(height: 40),
+            NewCollectionBanner(),
+            SectionHeader(title: 'Recommended'),
+            RecommendedList(),
+            SizedBox(height: 40),
+            TopCollectionBannerslim(),
+            SizedBox(height: 30),
+            SummerCollectionBanner(),
+          ],
+        ),
       ),
     );
   }
